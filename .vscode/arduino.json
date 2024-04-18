@@ -1,6 +1,6 @@
 {
     "board": "arduino:avr:uno",
     "programmer": "avrisp",
-    "port": "/dev/tty.usbmodem14601",
+    "port": "/dev/tty.usbmodem14901",
     "sketch": "espada_do_futuro.ino"
 }

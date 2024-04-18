@@ -62,14 +62,6 @@ void loop()
   }
   sendMessage(3,mapToFloat(freq3,minFreq3,maxFreq3,0,1));
 
-  Serial.print(freq3);
-  Serial.print("\t");
-  Serial.print(maxFreq3);
-  Serial.print("\t");
-  Serial.print(minFreq3);
-  Serial.print("\t");
-  Serial.println(mapToFloat(freq3,minFreq3,maxFreq3,0,1));
-
   freq4 += (sensor4.capacitiveSensor(10)-freq4)*0.1;
   if (freq4>maxFreq4) {
     maxFreq4 = freq4;
@@ -77,18 +69,20 @@ void loop()
     minFreq4 = freq4;
   }
   sendMessage(4,mapToFloat(freq4,minFreq4,maxFreq4,0,1));
+  
 
   sensorb0 = !digitalRead(pin0);
-  sendMessage(6, sensorb0); 
+  sendMessage(5, sensorb0); 
+  Serial.println(sensorb0);
 
   sensorb1 = !digitalRead(pin1);
-  sendMessage(7, sensorb1); 
+  sendMessage(6, sensorb1); 
 
   sensorb2 = !digitalRead(pin2);
-  sendMessage(8, sensorb2); 
+  sendMessage(7, sensorb2); 
 
   sensorb3 = !digitalRead(pin3);
-  sendMessage(9, sensorb3);
+  sendMessage(8, sensorb3);
   
   delay(250);
   time();

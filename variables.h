@@ -19,7 +19,7 @@ float maxFreq1, maxFreq2, maxFreq3, maxFreq4, maxFreq5;
 float minFreq1, minFreq2, minFreq3, minFreq4, minFreq5;
 
 // Sensores booleanos
-bool sensorb0, sensorb1, sensorb2, sensorb3, sensorb4;
+bool sensorb0, sensorb1, sensorb2, sensorb3;
 
 unsigned long tempoUltimoReset = 0;
 const unsigned long intervaloReset = 10000;
